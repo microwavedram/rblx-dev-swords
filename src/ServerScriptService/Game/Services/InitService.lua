@@ -20,12 +20,12 @@ end
 
 
 function InitService:KnitStart()
-    
+    Knit.log(string.format("Service %s Ready",self.Name),"s")
 end
 
 
 function InitService:KnitInit()
-    Knit.log(string.format("Service %s Ready",self.Name),"s")
+    
 end
 
 

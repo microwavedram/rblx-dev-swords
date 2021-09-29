@@ -2,7 +2,7 @@ local Knit = require(game:GetService("ReplicatedStorage").Knit)
 local Component = require(Knit.Util.Component)
 
 local Players = game:GetService("Players")
-local ProfileService = require(game:GetService("ServerScriptService").Game.modules.ProfileService)
+local ProfileService = require(game:GetService("ServerScriptService").Game.Modules.ProfileService)
 
 local DatabaseService = Knit.CreateService {
     Name = "DatabaseService";
@@ -10,9 +10,7 @@ local DatabaseService = Knit.CreateService {
 }
 
 local PROFILE_TEMPLATE = {
-    PlayerSave = {
-
-    },
+    PlayerSave = {},
     PlayerStats = {
         Rank = "",
         LogInTimes = 0,
@@ -56,8 +54,8 @@ function DatabaseService:PlayerAdded(player)
     end
 end
 
-function DatabaseService:KnitStart1()
-    
+function DatabaseService:KnitStart()
+    Knit.log(string.format("Service %s Ready",self.Name),"s")
 end
 
 function DatabaseService:KnitInit()

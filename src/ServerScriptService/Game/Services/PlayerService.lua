@@ -7,6 +7,7 @@ local PlayerService = Knit.CreateService {
 }
 
 function PlayerService:KnitStart()
+    Knit.log(string.format("Service %s Ready",self.Name),"s")
     local function PlayerAdded(Player)
         Knit.log(string.format("New Player: %s",Player.Name))
         local function CharacterAdded(Character)
@@ -23,7 +24,7 @@ function PlayerService:KnitStart()
 end
 
 function PlayerService:KnitInit()
-    Knit.log(string.format("Service %s Ready",self.Name),"s")
+    
 end
 
 return PlayerService
